@@ -1,6 +1,6 @@
 def reverse(string):
     separator = ''
-    return separator.join(list(reversed(string)))
+    return separator.join(reversed(string))
 
 print(reverse('sam'))
 
@@ -12,17 +12,15 @@ def reverseSentence(sentence):
 
 print(reverseSentence('switch my order'))
 
-def min(lst):
-    lst.sort()
-    return lst[0]
+def minEl(lst):
+    return min(lst)
 
-print(min([2,1,3]))
+print(minEl([2,1,3]))
 
-def max(lst):
-    lst.sort(reverse=True)
-    return lst[0]
+def maxEl(lst):
+    return max(lst)
 
-print(max([2,1,3]))
+print(maxEl([2,1,3]))
 
 def remainder(num, den):
     return num % den
@@ -30,10 +28,7 @@ def remainder(num, den):
 print(remainder(5,3))
 
 def unique(lst):
-    for x in lst:
-        if lst.count(x) > 1:
-            lst.remove(x)
-    return lst
+    return list(set(lst))
 
 print(unique([1,2,3]))
 print(unique([1,2,1,3]))
